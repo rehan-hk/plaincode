@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plaincode"
+  short_description: "Straightforward code that is easy to maintain"
+  default_prompt: "Use $plaincode to implement this change with straightforward, readable code while preserving its full behavior."
