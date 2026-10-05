@@ -12,7 +12,7 @@ Date: 2026-10-05. These are two **unedited agent outputs**, one per condition. T
 - No tools were used by either generation. The task supplied all required context.
 - Baseline received the task only. The skill condition received `Apply the following coding skill to the task below.`, then the full root `SKILL.md`, then `TASK` and the same task prompt.
 - The surrounding Codex system instructions were not controlled or audited. A later native-discovery check showed existing personal coding guidance remained available despite ignoring user configuration and disabling project documents. This is a CLI comparison, not a raw-model experiment with a proven empty instruction environment.
-- Correctness checks ran on Node.js `26.5.0`, macOS. CI also runs the saved artifacts on Node.js 22, Linux.
+- Correctness checks ran on Node.js `26.5.0`, macOS. The CI workflow targets Node.js 22 on Linux, but hosted execution was unavailable at initial publication and remains unverified.
 
 The generation command for each arm was:
 
@@ -48,7 +48,7 @@ node evals/check.mjs evals/results/initial-codex/baseline.mjs
 node evals/check.mjs evals/results/initial-codex/with-skill.mjs
 ```
 
-CI replays correctness checks on these saved files. It does not make fresh model calls or measure readability.
+The CI workflow is configured to replay correctness checks on these saved files. It does not make fresh model calls or measure readability.
 
 ## Native Codex discovery check
 
